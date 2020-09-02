@@ -1,41 +1,17 @@
 {
   "logs": [
     {
-      "message": "Changed network card in server 007",
-      "attention": true,
-      "tech": "Shernille Licud",
-      "date": "2020-09-02T00:30:27.384Z",
-      "id": 1
-    },
-    {
-      "id": 2,
-      "message": "Fixed Hard drive on workstation 002",
-      "attention": true,
-      "tech": "Shernille Licud",
-      "date": "2020-09-02T01:15:00.381Z"
-    },
-    {
-      "message": "1122 Wireless down",
-      "attention": true,
-      "tech": "Sebastian Licud",
-      "date": "2020-09-02T00:31:02.895Z",
-      "id": 3
+      "id": 1,
+      "message": "Changed network card in server 008 - SOLVED",
+      "attention": false,
+      "tech": "Jaden Licud",
+      "date": "2020-09-02T15:43:42.356Z"
     }
   ],
   "techs": [
     {
-      "id": 1,
-      "firstName": "Shernille",
-      "lastName": "Licud"
-    },
-    {
-      "id": 2,
-      "firstName": "Jaden",
-      "lastName": "Licud"
-    },
-    {
       "id": 3,
-      "firstName": "Sebastian",
+      "firstName": "Jaden",
       "lastName": "Licud"
     }
   ]
