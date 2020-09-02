@@ -6,13 +6,47 @@
       "attention": false,
       "tech": "Jaden Licud",
       "date": "2020-09-02T15:43:42.356Z"
+    },
+    {
+      "message": "Installed Hard Drive for PC #004",
+      "attention": true,
+      "tech": "Shernille Licud",
+      "date": "2020-09-02T18:03:32.031Z",
+      "id": 2
+    },
+    {
+      "message": "Fixed broken heart 002",
+      "attention": true,
+      "tech": "Gina Tanedo",
+      "date": "2020-09-02T18:04:49.347Z",
+      "id": 3
     }
   ],
   "techs": [
     {
-      "id": 3,
+      "id": 1,
       "firstName": "Jaden",
       "lastName": "Licud"
+    },
+    {
+      "id": 2,
+      "firstName": "Shernille",
+      "lastName": "Licud"
+    },
+    {
+      "id": 3,
+      "firstName": "Sebastian",
+      "lastName": "Licud"
+    },
+    {
+      "firstName": "Melanie",
+      "lastName": "Agner",
+      "id": 4
+    },
+    {
+      "firstName": "Gina",
+      "lastName": "Tanedo",
+      "id": 5
     }
   ]
 }

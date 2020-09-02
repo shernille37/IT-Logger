@@ -1,13 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import TechOptions from '../techs/TechOptions';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { addLog } from '../../actions/logActions';
+import { getTechs } from '../../actions/techActions';
 
-const AddLogModal = ({ addLog }) => {
+const AddLogModal = ({ addLog, getTechs, tech: { techs } }) => {
   const [message, setMessage] = useState('');
   const [attention, setAttention] = useState(false);
   const [tech, setTech] = useState('');
+
+  useEffect(() => {
+    getTechs();
+    // eslint-disable-next-line
+  }, []);
 
   const onSubmit = (e) => {
     if (message === '' || tech === '') {
@@ -60,9 +67,7 @@ const AddLogModal = ({ addLog }) => {
               <option value='' disabled>
                 Select Technician
               </option>
-              <option value='Shernille Licud'>Shernille Licud</option>
-              <option value='Jaden Licud'>Jaden Licud</option>
-              <option value='Sebastian Licud'>Sebastian Licud</option>
+              <TechOptions />
             </select>
           </div>
         </div>
@@ -104,7 +109,13 @@ const modalStyle = {
 };
 
 AddLogModal.propTypes = {
+  tech: PropTypes.object.isRequired,
   addLog: PropTypes.func.isRequired,
+  getTechs: PropTypes.func.isRequired,
 };
 
-export default connect(null, { addLog })(AddLogModal);
+const mapStateToProps = (state) => ({
+  tech: state.tech,
+});
+
+export default connect(mapStateToProps, { addLog, getTechs })(AddLogModal);

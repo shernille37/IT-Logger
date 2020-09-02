@@ -19,10 +19,25 @@ export default (state = initialState, action) => {
       };
     }
 
+    case ADD_TECH: {
+      return {
+        ...state,
+        techs: [...state.techs, action.payload],
+      };
+    }
+
     case DELETE_TECH: {
       return {
         ...state,
         techs: state.techs.filter((tech) => tech.id !== action.payload),
+      };
+    }
+
+    case TECHS_ERROR: {
+      console.log(action.payload);
+      return {
+        ...state,
+        error: action.payload,
       };
     }
 
